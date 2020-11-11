@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Schülersprecherwahl Abstimmung</title>
+    <link rel="stylesheet" href="css/votestyle.css" type="text/css" media="all"/>
+</head>
+
+<body>
+<section class="vote-form">
+    <div class="container">
+        <label class="wrapper">Aaron, Tung, Xavier
+            <input type="radio" name="radio" value="Aaron">
+            <span class="checkmark"></span>
+        </label>
+        <label class="wrapper">Annika, Frederik, Néné
+            <input type="radio" name="radio" value="Annika">
+            <span class="checkmark"></span>
+        </label>
+        <label class="wrapper">Enthalten
+            <input type="radio" name="radio" value="Enthalten">
+            <span class="checkmark"></span>
+        </label>
+        <button onclick="handleSubmit()" id="submit" type="submit">Wählen</button>
+    </div>
+</section>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/vote.js"></script>
+</html>
