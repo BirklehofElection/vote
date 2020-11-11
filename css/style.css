@@ -9,11 +9,16 @@ body, html {
 }
 
 .wrapper {
-    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 15px;
     margin-right: auto;
     margin-left: auto;
+    background: black;
+    opacity: 80%;
+    border-radius: 40px;
+    z-index: 1;
 }
 
 @media (min-width: 576px) {
@@ -61,24 +66,8 @@ button, .btn, select {
 .container {
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #969696;
     padding: 10px;
     border-radius: 2px;
-}
-
-.login-form #form-section:before {
-    content: "";
-    background: rgba(0, 0, 0, 0.65);
-    position: absolute;
-    top: 0;
-    min-height: 100%;
-    left: 0;
-    right: 0;
-    z-index: -1;
-
-    animation-name: demo;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
 }
 
 .logo {
@@ -88,19 +77,18 @@ button, .btn, select {
     align-content: center;
     text-align: center;
     padding: 10px;
-    border: 3px solid gray;
-    background: #585858;
 }
 
 .logo a {
     font-size: 36px;
-    color: #fff;
+    font-family: "Arial", serif;
+    color: #208000;
     line-height: 40px;
     font-weight: normal;
+    z-index: 2;
 }
 
 .login-form .login-form {
-    background: #fff;
     max-width: 600px;
     margin: 0 auto;
     box-shadow: 0 9px 24px 5px rgba(0, 0, 0, 0.04);
@@ -111,19 +99,24 @@ button, .btn, select {
     -webkit-appearance: none;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    color: #777777;
-    border: none;
-    background-color: #969696;
+    font-family: Arial, serif;
+    font-size: 18px;
+    color: black;
+    border: 2px solid #208000;
+    background: none;
     padding: 24px;
     width: 580px;
+    border-radius: 40px;
+    opacity: 100%;
+    z-index: 2;
 }
 
-.login-form .login-form form input[type="email"]:focus,
-.login-form .login-form form input[type="password"]:focus {
+.login-form .login-form form input[type="email"]:hover,
+.login-form .login-form form input[type="password"]:hover {
     outline: none;
-    background-color: #a0a0a0;
+    background-color: white;
     box-shadow: none;
+    opacity: 100%;
 }
 
 .login-form form button {
@@ -131,27 +124,27 @@ button, .btn, select {
     font-size: 14px;
     line-height: 25px;
     text-align: center;
-    color: #ffffff;
-    background: #28720f;
+    color: black;
+    background: #208000;
     height: 55px;
-    border: none;
     display: block;
     cursor: pointer;
     width: 100%;
     font-weight: bold;
     text-transform: uppercase;
-    opacity: 0.8;
+    opacity: 1;
     transition: 0.3s ease-in-out;
+    border-radius: 40px;
+    margin-top: 40px;
+    z-index: 2;
+    border: none;
 }
 
 .login-form form button:hover {
-    background: #327819;
+    background: #208000;
     transition: 0.3s ease-in-out;
     opacity: 1;
-}
 
-.login-form .login-form form button:focus {
-    outline: none;
 }
 
 @media (max-width: 767px) {
@@ -167,21 +160,5 @@ button, .btn, select {
 
     .login-form .login-form form input[type="email"] {
         border-right: none;
-        border-bottom: 1px solid #e8e8e8;
-    }
-}
-
-@keyframes demo {
-    0%, 100% {
-        background: rgba(5, 20, 5, 0.65);
-    }
-    25% {
-        background: rgba(10, 50, 10, 0.55);
-    }
-    50% {
-        background: rgba(5, 20, 5, 0.65);
-    }
-    75% {
-        background: rgba(10, 50, 10, 0.55);
     }
 }

@@ -5,35 +5,55 @@
 body, html {
   margin: 0 auto;
   padding: 0;
-  color: #585858;
+  background-image: url("../images/background.png");
+  background-size: cover;
 }
 
 .container {
-  width: 450px;
+  width: 600px;
   padding: 15px;
   margin: 0 auto;
-  background: rgba(5, 5, 5, 0.7);
   align-self: center;
+  background: black;
+  opacity: 80%;
+  border-radius: 40px;
+
 }
 
 .wrapper {
   display: block;
+  font-size: 36px;
+  font-family: "Arial", serif;
   position: relative;
-  padding-left: 35px;
+  padding: 10px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 30px;
-  color: #fff;
+  color: #208000;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border-radius: 40px;
+  border: 2px solid #208000;
 }
 
 .wrapper input {
-  position: absolute;
+  position: relative;
   opacity: 0;
   cursor: pointer;
+  margin: 10px;
+}
+.checkmark {
+  margin: 10px;
+}
+.check {
+  position: relative;
+  margin-left: 10px;
+}
+.wrapper a {
+  position: relative;
+  left: 20px;
+  margin-left: 10px;
 }
 
 .wrapper:hover input ~ .checkmark {
@@ -41,7 +61,7 @@ body, html {
 }
 
 .wrapper input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: darkgreen;
 }
 
 .wrapper input:checked ~ .checkmark:after {
@@ -99,7 +119,7 @@ body, html {
 
 .vote-form:before {
   content: "";
-  background: rgba(0, 0, 0, 0.65);
+  background: none;
   position: absolute;
   top: 0;
   min-height: 100%;
@@ -127,8 +147,8 @@ body, html {
   font-size: 14px;
   line-height: 25px;
   text-align: center;
-  color: #ffffff;
-  background: #28720f;
+  color: black;
+  background: #208000;
   height: 55px;
   border: none;
   display: block;
@@ -136,12 +156,12 @@ body, html {
   width: 100%;
   font-weight: bold;
   text-transform: uppercase;
-  opacity: 0.8;
   transition: 0.3s ease-in-out;
+
+  border-radius: 40px;
 }
 
 .vote-form button:hover {
-  background: #327819;
   transition: 0.3s ease-in-out;
   opacity: 1;
 }
@@ -152,17 +172,3 @@ body, html {
   opacity: 1;
 }
 
-@keyframes background {
-  0%, 100% {
-    background: rgba(5, 20, 5, 0.65);
-  }
-  25% {
-    background: rgba(10, 50, 10, 0.55);
-  }
-  50% {
-    background: rgba(5, 20, 5, 0.65);
-  }
-  75% {
-    background: rgba(10, 50, 10, 0.55);
-  }
-}

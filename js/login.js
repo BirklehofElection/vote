@@ -1,4 +1,4 @@
-const api_url = "http://168.119.228.8:8080/"
+const api_url = "https://api.derklaro.me/"
 
 let error = new URL(window.location.href).searchParams.get("error")
 if (error !== null) {
