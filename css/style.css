@@ -9,10 +9,7 @@ body, html {
 }
 
 .wrapper {
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 20px;
-    padding-bottom: 15px;
+    padding: 20px 15px 15px;
     margin-right: auto;
     margin-left: auto;
     background: black;
@@ -94,8 +91,7 @@ button, .btn, select {
     box-shadow: 0 9px 24px 5px rgba(0, 0, 0, 0.04);
 }
 
-.login-form form input[type="email"],
-.login-form form input[type="password"] {
+.login-form form input[type="email"] {
     -webkit-appearance: none;
     font-style: normal;
     font-weight: normal;
@@ -111,8 +107,8 @@ button, .btn, select {
     z-index: 2;
 }
 
-.login-form .login-form form input[type="email"]:hover,
-.login-form .login-form form input[type="password"]:hover {
+.login-form .login-form form input[type="email"]:focus,
+.login-form .login-form form input[type="email"]:hover {
     outline: none;
     background-color: white;
     box-shadow: none;
