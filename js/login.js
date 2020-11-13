@@ -50,6 +50,6 @@ $(document).ready(function () {
 
 function resetBoxContent() {
     setTimeout(function () {
-        document.getElementById("box").innerText = "Bitte Schulemail benutzen!"
+        document.getElementById("box").innerText = "Bitte Schul-E-Mail benutzen!"
     }, 5000)
 }
