@@ -23,7 +23,7 @@ function validateRequestAndEnable() {
             } else if (validateType === 1) {
                 window.open("index.html?error=6", "_self")
             } else if (validateType === 2) {
-                alert("Du hast bereits abgestimmt")
+                alert("Du hast bereits abgestimmt!")
             }
         } else {
             window.open("index.html?error=10", "_self")
@@ -57,11 +57,11 @@ function handleCheckedRadio(radio) {
         if (xmlHttp.status === 200) {
             let json = JSON.parse(xmlHttp.responseText)
             if (json.success) {
-                alert("Du hast erfolgreich abgestimmt, vielen Dank")
+                alert("Du hast erfolgreich abgestimmt, vielen Dank!")
             } else if (json.error === 2) {
                 window.open("index.html?error=10", "_self")
             } else if (json.error === 1) {
-                alert("Du hast bereits abgestimmt")
+                alert("Du hast bereits abgestimmt!")
             } else if (json.error === 6) {
                 window.open("index.html?error=" + json.error, "_self")
             }

@@ -4,17 +4,17 @@ let error = new URL(window.location.href).searchParams.get("error")
 if (error !== null) {
     let box = document.getElementById("box")
     if (error === "4") {
-        box.innerText = "Die E-Mail wurde bereits versendet"
+        box.innerText = "Die E-Mail wurde bereits versendet."
         resetBoxContent()
     } else if (error === "5") {
-        box.innerText = "Bitte gebe deine korrekte E-Mail an!"
+        box.innerText = "Bitte gib deine korrekte E-Mail an!"
         resetBoxContent()
     } else if (error === "6") {
-        alert("Der genutzte Token ist ungültig")
+        alert("Der genutzte Token ist ungültig.")
     } else if (error === "7") {
-        alert("Bitte nutze den in der E-Mail angegebenen Link um diese Seite auzurufen")
+        alert("Bitte nutze den in der E-Mail angegebenen Link, um diese Seite aufzurufen.")
     } else if (error === "3" || error === "10") {
-        box.innerText = "Ein Server Fehler ist aufgetreten."
+        box.innerText = "Ein Serverfehler ist aufgetreten."
         resetBoxContent()
     }
 }
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
         let email = document.getElementById("mail").value
         if (email.length === 0) {
-            alert("Bitte gebe einen Benutzernnamen und ein Passwort an")
+            alert("Bitte gib einen Benutzernamen und ein Passwort an.")
             return
         }
 
@@ -36,7 +36,7 @@ $(document).ready(function () {
             if (xmlHttp.status === 200) {
                 let json = JSON.parse(xmlHttp.responseText);
                 if (json.success) {
-                    document.getElementById("box").innerText = "Die E-Mail wurde gesendet"
+                    document.getElementById("box").innerText = "Die E-Mail wurde gesendet!"
                 } else {
                     window.open("?error=" + json.error, "_self")
                 }
@@ -50,6 +50,6 @@ $(document).ready(function () {
 
 function resetBoxContent() {
     setTimeout(function () {
-        document.getElementById("box").innerText = "Bitte Schulemail benutzen!"
+        document.getElementById("box").innerText = "Bitte Schul-E-Mail benutzen!"
     }, 5000)
 }
